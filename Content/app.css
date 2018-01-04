@@ -1,0 +1,49 @@
+﻿.sm-lft {
+	float: right;
+    font-size: 8px;
+}
+
+.p-top-xs {
+	padding-top: 5px;
+}
+
+.p-top-sm {
+	padding-top: 10px;
+}
+
+.p-top-md {
+	padding-top: 20px;
+}
+
+.p-top-lg {
+	padding-top: 40px;
+}
+
+.p-bottom-xs {
+	padding-top: 5px;
+}
+
+.p-bottom-sm {
+	padding-top: 10px;
+}
+
+.p-bottom-md {
+	padding-top: 20px;
+}
+
+.p-bottom-lg {
+	padding-top: 40px;
+}
+
+.chat-text{
+	word-break: break-all
+}
+
+.div-border-circle {
+	border: 1px solid #ccc;
+	border-radius: 50px;
+}
+
+.in-line {
+	display:inline-block;
+}

@@ -1,0 +1,33 @@
+<div id="divChatSection_{{to}}" ng-init="init()">
+	<div class="row">
+		<div class="chat-window" style="right: 247px;">
+			<div class="chat-window-title">
+				<div class="text in-line">{{toname}}</div>
+				<svg height="15" width="15" class="in-line" ng-if="isToUserOnline">
+					<circle cx="10" cy="10" r="5" stroke-width="1" fill="green" />
+				</svg> 
+			</div>
+			<div class="chat-window-content">
+				<div class="chat-window-inner-content message-board pm-window" style="height: 235px;">
+					<div id="chatContainer_{{to}}" class="messages-wrapper" style="height: 214px;">
+						<div class="chat-message p-bottom-xs p-top-xs" data-val-user-from="1" ng-repeat="msg in messages">
+							<div ng-if="!msg.isConsicative" class="chat-gravatar-wrapper div-border-circle" >
+								<img ng-if="msg.from === to" class="profile-picture" ng-src="{{toavtar || 'Content/images/user_avatar_blue.png'}}">
+								<img ng-if="msg.from !== to" class="profile-picture" ng-src="{{fromavtar ||'Content/images/user_avatar_grey.png'}}">
+							</div>
+							<div class="chat-text-wrapper">
+								<p class="chat-text">{{msg.text}}</p>
+							</div>
+							<div class="sm-lft">
+								<span> {{msg.time}}</span>
+							</div>
+						</div>
+					</div>
+					<div id="divChatSectionTextArea_{{to}}" class="chat-window-text-box-wrapper">
+						<textarea ng-disabled="!isConnected" rows="1" class="chat-window-text-box" ng-model="txtMessage" ng-keypress="postmessageonenter($event, txtMessage)" style="overflow: hidden; word-wrap: break-word; resize: none; height: 21px;"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
